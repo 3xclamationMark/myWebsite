@@ -1,0 +1,59 @@
+ body{
+	background-attachment:fixed;
+	background-image: url("https://image.freepik.com/free-photo/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration_35913-2290.jpg");
+ }
+
+ ::selection{
+	 background-color: white;
+	 color: black;
+ }
+
+ ::-webkit-scrollbar{
+    width: 10px;
+	background-color: #001122;
+ }
+ ::-webkit-scrollbar-thumb{
+	background: #224477;
+	border-radius: 3px;
+ }
+
+ #digital{
+	text-align: center;
+	font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+
+.timetable{
+	text-align: center;
+	display: grid;
+	grid-template-rows:  repeat(3, 1fr 2fr);
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
+	padding: 10px;
+	margin: 25px 100px 25px 100px;
+	border-radius: 3px;
+	height: 70vh;
+}
+
+.item{
+	background-color: #336699;
+	border-radius: 3px;
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+	padding: 3px;
+}
+
+	.item:hover{
+		box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+		cursor: pointer
+	}
+
+.break{
+	background-color: #88AACC;
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
