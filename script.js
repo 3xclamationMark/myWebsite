@@ -10,7 +10,7 @@ setInterval(function () {
 	else if(seconds<10){
 		document.getElementById('digital').innerHTML=hours + ':' + minutes+ ':' + '0' + seconds;
 	} else if (minutes<10){
-		document.getElementById('digital').innerHTML=hours + ':' + '0' + ':' + minutes + ':' + seconds;
+		document.getElementById('digital').innerHTML=hours + ':' + '0' + minutes + ':' + seconds;
 	} else{
 		document.getElementById('digital').innerHTML=hours + ':' + minutes+ ':' + seconds;
 	}
