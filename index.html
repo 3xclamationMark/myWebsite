@@ -3,17 +3,343 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>HomePage - kelseyb</title>
-	<link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/811/811868.png">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>About Me</title>
+	  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/811/811868.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<style>
+
+		@keyframes spin1 {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin2 {
+	0%{
+		transform: rotate(90deg);
+	}
+	100%{
+		transform: rotate(450deg);
+	}
+}
+		
+	    /* Styling the main webpage */
+        body{
+        	background-color: white;
+        	margin: 0;
+        	margin-top: -20px;
+        	color: rgb(107, 107, 107);
+        	font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Styling important elements */
+        .page{
+        	margin-left: 10%;
+        	margin-right: 10%;
+        	margin-top: 100px;
+        }
+        
+        .heading{
+        	text-align: center;
+        	padding: 35px;
+        }
+        
+        p{ font-size: 15px;}
+        
+        a {
+            color: inherit;
+        }
+
+        
+        
+        /* Styling the scrollbar */
+        ::-webkit-scrollbar {width: 15px;}
+        
+        ::-webkit-scrollbar-track{background-color: rgba(228, 223, 218);}
+                    
+        ::-webkit-scrollbar-thumb {background-color: rgb(140, 140, 140);}
+                
+        ::-webkit-scrollbar-thumb:hover{background-color: rgb(105, 105, 105);}
+        
+        
+        /* Styling the header */
+        #header{
+        	background-color: white;
+        	position: fixed;
+        	top: -17px;
+        	color: rgb(134, 134, 134);
+        	height: 70px;
+        	width: 100%;
+        	box-shadow: 0px 2px rgba(0, 0, 0, 0.137);
+        	display: flex;
+        	justify-content: space-evenly;
+        	align-items: stretch;
+        	align-content: stretch;
+        	z-index: 100;
+        }
+        
+        i{
+        	display: flex;
+        	top: 0%;
+        }
+        
+        span:hover{
+        	cursor: pointer;
+        	color: rgb(97, 97, 97);
+        }
+        
+        /* Styling the dark mode button */
+        #dark-mode{
+        	background-color: rgb(133, 133, 133);
+        	position: fixed;
+        	border-radius: 50%;
+        	width: 50px;
+        	height: 50px;
+        	bottom: 30px;
+        	right: 30px;
+        	margin-right: 20px;
+        	margin-bottom: 20px;
+        	color: white;
+        }
+        
+        #dark-mode:hover{
+        	cursor: pointer;
+        	background-color: rgb(71, 71, 71);
+        }
+        
+        #dark-mode i{
+        	padding: 12px;
+        	
+        }
+        
+        .about-box{
+        	background-color: #336699;
+        	border-radius: 5px;
+        	padding: 10px;
+        	margin-top: 17px;
+        	color: white;
+        	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.26);
+        }
+        
+        .about-box:hover{
+        	box-shadow: 2px 2px 2px 4px rgba(0, 0, 0, 0.26);
+        	cursor: pointer;
+        }
+
+		
+.windmill{
+	position: absolute;
+	top: 180px;
+}
+
+.stem{
+	background-color: rgb(201, 201, 201);
+	width: 20px;
+  	height: 300px;
+	border-radius: 30%;
+	position: absolute;
+	top: 150px;
+	left: 675px;
+}
+
+.fan{
+	width: 50vh;
+	height: 50vh;
+	margin: auto;
+}
+
+.center{
+	background-color: rgb(66, 66, 66);
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 675px;
+	top: 150px;
+}
+
+.blade{
+	background-color: rgb(145, 145, 145);
+	border-radius: 40%;
+	width: 30px;
+	height: 300px;
+	position: absolute;
+	left: 670px;
+	top: 11px;
+}
+
+#blade1{
+	animation: spin1 1s linear infinite;
+}
+
+#blade2{
+	transform: rotate(90deg);
+}
+
+#blade2{
+	animation: spin2 1s linear infinite;
+}
+
+
+	</style>
   </head>
+	
   <body>
-	<div class = 'grid-container'>
-		<div class = 'item'><p>Welcome to my website!</p></div>
-		<div class = 'item'><p>Timetable</p></div>
-		<div class = 'item'><p>French blog</p></div>
-		<div class = 'item'><p>Another project?</p></div>
+	<div id = "header">
+		<span  class = "heading"  onclick='goToPage("home")' title = "Home">
+			<i class="material-icons">home</i>
+		</span>
+		<span class = "heading" onclick='goToPage("projects")' title = "Projects">
+			<i class="material-icons">article</i>
+		</span>
+		<span class = "heading" onclick='goToPage("learn")' title = "Learn">
+			<i class="material-icons" >lightbulb</i>
+		</span>
+		<span class = "heading" onclick='goToPage("about")' title = "About">
+			<i class="material-icons">info</i>
+		</span>
 	</div>
-    <script src="script.js"></script>
+	<div id = "dark-mode" onclick='dark_mode()'>
+		<i class="material-icons" id = "darkLight" title = "Dark mode">dark_mode</i>
+	</div>
+	
+	<div class = "page" id = "home">
+	    <h3>Home</h3>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu facilisis tortor. Etiam efficitur lobortis metus, nec pulvinar sem bibendum quis. Quisque metus leo, condimentum eget venenatis a, rutrum id dolor. Vestibulum a laoreet mi. Fusce vulputate sit amet erat eget condimentum. Aenean rhoncus tempor gravida. Curabitur sagittis orci mi, quis aliquet urna pretium vitae. Aliquam venenatis lacus tristique dui porttitor cursus. Praesent tortor lacus, mattis feugiat ex ut, auctor condimentum sem. Morbi elementum, ipsum at lacinia feugiat, leo nisl ornare orci, sit amet egestas dolor sapien id nisi. Mauris aliquam ultrices mauris placerat tempus. Nam at neque bibendum, consectetur quam ac, tempor quam.</p>
+
+		<div class = 'windmill'>
+		<div class = 'stem'></div>
+		<div class = 'fan'>
+			<div class = 'blade' id = 'blade1'></div>
+			<div class = 'blade' id = 'blade2'></div>
+			<div class = 'center'></div>
+		</div>
+	</div>
+	</div>
+	<div class = "page" id = "projects">
+		<h3>Projects</h3>
+		<a>
+			<div class = 'about-box'>
+				<h4>Timetable</h4>
+			    <p>My school timetable.</p>
+			</div>
+		</a>
+
+		<a>
+			<div class = 'about-box'>
+				<h4>French blog</h4>
+			    <p>A way for me to practise my French.</p>
+			</div>
+		</a>
+
+		<a>
+		<div class = 'about-box'>
+			<h4>ClickIt</h4>
+		    <p>A clicking game.</p>
+		</div>
+		</a>
+
+		<a>
+		<div class = 'about-box'>
+			<h4>Noteabl</h4>
+		    <p>A simple note taking app. I am hoping to add more functionality, such as deleting and saving them.</p>
+		</div>
+		</a>
+	</div>
+	
+	<div class = "page" id = "learn">
+	    <h3>How I made this website</h3>
+		<h4>Step 1: Buy a domain</h4>
+		<p>Buy a domain (I used google domains). These can be bought for as little as £7 per year.</p>
+		<h4>Step 2: Set up <a href = 'cloudflare.com'>cloudflare</a></h4>
+		<p>Follow online instructions to link your domain to cloudflare. This will provide security for your website, and make it easier to host. Cloudflare also provides analytics, and an easy to use dashboard to check your website is working as it should.</p>
+		<h4>Step 3: Host the website</h4>
+		<p>I used <a href = 'https://pages.github.com/'>github</a> pages to host my website. It is easiest to set this up through cloudflare, instead of through github.</p>
+	</div>
+
+	  
+	<div class = "page" id = "about">
+	    <h3>About</h3>
+	    <p>Made in 2021. Deployed in 2022.</p>
+		<a href = 'https://coolors.co/001122-113355-224477-336699-88aacc'>The color scheme for this website.</a>
+	</div>
+	
+	<script>
+	    /* Gets the pages */
+        var pages = document.getElementsByClassName("page");
+        var s = document.getElementsByClassName("material-icons");
+        var modeIcon = document.getElementById("dark-mode");
+        var darkLight = document.getElementById("darkLight");
+        var bodyEl = document.body;
+        var header = document.getElementById("header");
+        let darkMode = false;
+        
+        var style = function(page){
+        	for (var i = 0; i < pages.length; i++) {
+        		if(pages[i].style.display === "block"){
+        			s[i].style.color = "rgb(51, 102, 153)";
+        		} else{
+        			s[i].style.color = "";
+        		}
+        		
+        	}
+        }
+        
+        /* Hides them all */
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = "none";
+        }
+        
+        /* Shows the first page */
+        pages[0].style.display = "block";
+        s[0].style.color = "rgb(51, 102, 153)"
+        
+        
+        /* When a page is clicked, go to that page */
+        var goToPage = function(page) {
+        	for (var i = 0; i < pages.length; i++) {
+        		pages[i].style.display = "none";
+        	}
+          
+        	switch (page) {
+        		case 'home':
+            		pages[0].style.display = "block";
+            	break;
+            	case 'projects':
+            		pages[1].style.display = "block";
+            	break;
+        		case 'learn':
+            		pages[2].style.display = "block";
+            	break;
+        		case 'about':
+            		pages[3].style.display = "block";
+        		break;
+        	}
+        	style();
+        }
+        
+        /* dark mode */
+        var dark_mode = function(){
+        	if(darkMode === false){
+        		bodyEl.style.backgroundColor = "rgb(40, 40, 40)";
+        		bodyEl.style.color = "rgb(230, 230, 230)";
+        		header.style.backgroundColor = "rgb(50, 50, 50)";
+        		darkLight.innerHTML = "light_mode";
+        		darkMode = true;
+        	} else{
+        		bodyEl.style.backgroundColor = "";
+        		bodyEl.style.color = "";
+        		header.style.backgroundColor = "white";
+        		darkLight.innerHTML = "dark_mode";
+        		darkMode = false;
+        	}
+        	
+        }
+	</script>
   </body>
 </html>
